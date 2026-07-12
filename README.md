@@ -6,6 +6,10 @@ Design, modeling and simulation **from scratch** of a 4-axis collaborative SCARA
 
 **Team:** Jessica Dichakdjian · Keylian Paris · Mateo Zeneli
 
+<p align="center">
+  <img src="media/images/cad_render.png" alt="SCARA 4-DOF CAD render" width="380">
+</p>
+
 ---
 
 ## Overview
@@ -23,6 +27,13 @@ Design, modeling and simulation **from scratch** of a 4-axis collaborative SCARA
 | **A→D→D2→E** (ADE) | Cubic splines | Smooth inspection motion; lower dynamic stress |
 
 Key results: Joint 2 (shoulder) dominates torque demand (peak ≈ 9.3 → 14.1 Nm with payload on ABC); MATLAB inverse dynamics validated against Simscape.
+
+| Workspace (manipulability map) | Joint torques – ABC, 0.5 kg payload |
+|---|---|
+| ![Workspace colored by manipulability](media/images/workspace_manipulability.png) | ![Joint torques ABC](media/images/torques_ABC_0.5kg.png) |
+
+![Motor torques with belt reduction vs motor limits](media/images/torques_belt_reduction_1kg.png)
+*Motor-side torques with belt transmission (1 kg payload) vs HG-MR13 / HG-MR23 rated and max torque limits.*
 
 ---
 
@@ -49,7 +60,7 @@ Key results: Joint 2 (shoulder) dominates torque demand (peak ≈ 9.3 → 14.1 N
 │   ├── drawings/              Exploded views: base, arms, gripper, full assembly
 │   └── step/                  Work-object geometry (helmet / visor STEP)
 ├── docs/                    Project presentation + motor datasheets
-└── media/                   Simulation videos (ABC & ADE trajectories)
+└── media/                   Simulation videos (ABC & ADE trajectories) + README images
 ```
 
 ## How to run
